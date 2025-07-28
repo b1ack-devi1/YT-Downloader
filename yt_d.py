@@ -31,7 +31,28 @@ def download_format(url, format_id, output_path):
 
     with YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
-        print("\n✔️ Download complete!")
+        print("\n ✔️ Download complete!")
+
+
+def mainRe():
+    print(
+    "\n 🎥To download another video paste the URL or Ctrl+C to exit.")
+
+    url = input(" \n 🔗 Enter YouTube URL : ").strip()
+    title = list_formats(url)
+
+    format_id = input("\n ❓ Enter the Format ID : ").strip()
+    output_path = input("\n 📁 Enter the folder path to save the video (default: current dir): ").strip()
+    if not output_path:
+        output_path = "."
+
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
+    print(f"\n 📥 Downloading '{title}' in format {format_id}...")
+    download_format(url, format_id, output_path)
+
+    mainRe()
 
 def main():
     print(r"""
@@ -44,19 +65,22 @@ def main():
           created by: @b1ack-devi1
                                                                           
     """)
-    url = input("🔗 Enter YouTube URL : ").strip()
+    url = input(" 🔗 Enter YouTube URL : ").strip()
     title = list_formats(url)
 
-    format_id = input("\n❓ Enter the Format ID : ").strip()
-    output_path = input("📁 Enter the folder path to save the video (default: current dir): ").strip()
+    format_id = input("\n ❓ Enter the Format ID : ").strip()
+    output_path = input("\n 📁 Enter the folder path to save the video (default: current dir): ").strip()
     if not output_path:
         output_path = "."
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    print(f"\n📥 Downloading '{title}' in format {format_id}...")
+    print(f"\n 📥 Downloading '{title}' in format {format_id}...")
     download_format(url, format_id, output_path)
+
+
+    mainRe()
 
 if __name__ == "__main__":
     main()
