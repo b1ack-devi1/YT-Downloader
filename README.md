@@ -1,22 +1,20 @@
-# 🎥 YouTube Downloader CLI Tool
+# YouTube Downloader CLI Tool
 
 A terminal-based YouTube downloader built with [yt-dlp](https://github.com/yt-dlp/yt-dlp).  
 List all available video/audio formats of a YouTube video and download in your chosen format.
 
-> ✅ Created by: [@b1ack-devi1](https://github.com/b1ack-devi1)
+Created by: [@b1ack-devi1](https://github.com/b1ack-devi1)
 
----
 
-## 🚀 Features
+## Features
 
-- ✅ List all available formats (video/audio) with details like resolution, size, bitrate.
-- 🎯 Download any format by providing the `Format ID`.
-- 🗂 Save to any folder you choose.
-- 🖥️ Works in terminal (cross-platform).
+- List all available formats (video/audio) with details like resolution, size, bitrate.
+- Download any format by providing the `Format ID`.
+- Save to any folder you choose.
+-  Works in terminal (cross-platform).
 
----
 
-## 📸 Preview
+## Preview
 
 ```bash
 🔗 Enter YouTube URL : https://www.youtube.com/watch?v=dQw4w9WgXcQ
@@ -35,7 +33,7 @@ Format ID  Ext    Resolution   Size (MB)  Bitrate    Note
 ✔️ Download complete!
 ```
 
-## 📦 Installation
+##  Installation
 - Clone the repository:	
    ```bash
    git clone https://github.com/b1ack-devi1/YT-Downloader.git
@@ -45,7 +43,10 @@ Format ID  Ext    Resolution   Size (MB)  Bitrate    Note
   ```bash
   pip install -r requirements.txt
   ```
-
+- Update yt-dlp
+  ``` bash
+    pip install --upgrade yt-dlp
+	```
 - Run:
 	``` bash
 	python yt_d.py
@@ -56,7 +57,7 @@ This project is open-source and available under the MIT License.
 
 ----------
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 -   [yt-dlp](https://github.com/yt-dlp/yt-dlp) – Powerful YouTube downloading library
     
